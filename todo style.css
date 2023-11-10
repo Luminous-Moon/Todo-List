@@ -1,0 +1,23 @@
+
+input[id = cb1], input[id = cb2], input[id = cb3] {
+    display: inline;
+    float: left;
+    
+}
+
+/*change the text to line through and grey after clicked*/
+input[id = cb1]:checked~.strikethrough {
+    text-decoration: line-through;
+    color: #818181; 
+}
+
+input[id = cb2]:checked~.strikethrough {
+    text-decoration: line-through;
+    color: #818181; 
+}
+
+input[id = cb3]:checked~.strikethrough {
+    text-decoration: line-through;
+    color: #818181; 
+}
+
