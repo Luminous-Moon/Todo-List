@@ -1,0 +1,54 @@
+<html>
+<!--10/11/2023-->
+<head>
+    <link rel="stylesheet" href="todo style.css">
+</head>
+
+<body>
+    <h1>Live To-do List</h1>
+
+    <button type='button' onclick='storeinput()'>Add item</button>
+    <input type='text' id='input1'>
+    
+    <ul id='outlist'></ul>
+
+
+    <input name="cb1" type="checkbox" id="cb1">
+    <p class="strikethrough">ae</p>
+
+    <input name="cb2" type="checkbox" id="cb2">
+    <p class="strikethrough">Pay bills</p>
+    
+    <input name="cb3" type="checkbox" id="cb3">
+    <p class="strikethrough">Wash dishes</p>
+
+
+<script>
+    function storeinput() {
+  //get value in input and the output element
+  var out = document.querySelector('#outlist');
+  var val = document.querySelector('#input1').value.trim();
+
+  //if value is null ignore it
+  if (val != null && val != '') {
+    //create list element and add value
+    var li = document.createElement('li');
+    li.appendChild/*adds new input to end of list*/(document.createTextNode(val)); //text node is plain text
+
+    //add list element to end of the list
+    out.appendChild(li);
+
+    //clear input 
+    document.querySelector('#input1').value = null;
+  }
+
+  //set focus to input. Puts attention back to user input(?)
+  document.querySelector('#input1').focus();
+}
+
+</script>
+
+
+</body>
+
+</html>
